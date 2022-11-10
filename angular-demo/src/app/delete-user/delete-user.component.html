@@ -1,0 +1,10 @@
+<div class="delete-user-container">
+  <form [formGroup] = "deleteUser" >
+    <mat-form-field>
+      <input matInput id ="idUser" placeholder="ID USER"  formControlName="idUser">
+
+    </mat-form-field>
+    <br>
+    <button (click)="deleteUserOnClick()">Delete user</button>
+  </form>
+</div>

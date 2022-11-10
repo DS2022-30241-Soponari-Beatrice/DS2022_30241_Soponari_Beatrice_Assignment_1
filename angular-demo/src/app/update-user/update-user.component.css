@@ -1,0 +1,10 @@
+.update-user{
+  display: inline-block;
+  place-items: center;
+  margin-left:40%;
+}
+.user-title{
+  padding-top: 20px;
+  padding-bottom: 70px;
+  font-size: 30px;
+}

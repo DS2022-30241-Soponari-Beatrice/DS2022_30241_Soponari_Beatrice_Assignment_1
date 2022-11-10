@@ -1,0 +1,22 @@
+<div class="update-user">
+  <div class="user-title">Update user</div>
+  <form [formGroup] = "updateUser" > <mat-form-field>
+    <input matInput placeholder="username" formControlName="username">
+  </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput type="password" name ="password" placeholder="password" formControlName="password">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput name ="name" placeholder="name" formControlName="name">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput name ="role" placeholder="role" formControlName="role">
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary" (click)="updateUserOnClick()">Update user</button>
+
+  </form>
+</div>

@@ -1,0 +1,5 @@
+.container-home-page{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}

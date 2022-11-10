@@ -1,0 +1,6 @@
+.add-users-component{
+  display: flex;
+  justify-content: center;
+  column-gap: 200px;
+}
+

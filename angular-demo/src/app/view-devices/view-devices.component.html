@@ -1,0 +1,32 @@
+<div>
+  <table class="client_table">
+    <thead class="table-head">
+    <tr>
+      <th>Id</th>
+      <th>Description</th>
+      <th>Address</th>
+      <th>Max hourly consumption</th>
+      <th>Edit device</th>
+      <th>Delete device</th>
+    </tr>
+    </thead>
+    <tbody class="table-body">
+    <ng-container *ngIf="devices$ | async as devices$ else noData">
+      <tr *ngFor="let device of devices$">
+        <td>{{device.id}}</td>
+        <td>{{device.description}}</td>
+        <td>{{device.address}}</td>
+        <td>{{device.max_hourly_energy_consumption}}</td>
+        <td> <button class="edit_client_button" routerLink="/edit-device/{{device.id}}" routerLinkActive="active" ariaCurrentWhenActive="page" mat-button>Edit device</button>
+        <td> <button class="delete_client_button" mat-button (click)="deleteDevice(device.id)">Delete device</button>
+      </tr>
+    </ng-container>
+    </tbody>
+  </table>
+
+  <button mat-button (click)="goToAddDevice()">Add device</button>
+
+
+
+  <ng-template #noData>No Data Available</ng-template></div>
+

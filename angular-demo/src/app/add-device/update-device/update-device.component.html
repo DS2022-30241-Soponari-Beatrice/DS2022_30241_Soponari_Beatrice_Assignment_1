@@ -1,0 +1,18 @@
+<div class="update-user">
+  <div class="user-title">Update user</div>
+  <form [formGroup] = "updateDevice" > <mat-form-field>
+    <input matInput placeholder="description" formControlName="description">
+  </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput name ="address" placeholder="address" formControlName="address">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput name ="max_hourly_energy_consumption" placeholder="max_hourly_energy_consumption" formControlName="max_hourly_energy_consumption">
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary" (click)="updateDeviceOnclick()">Register </button>
+
+  </form>
+</div>

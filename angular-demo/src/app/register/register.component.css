@@ -1,0 +1,7 @@
+.manage-users-form{
+  display: flex;
+  justify-content: center;
+}
+.delete-user-container{
+  background-color: red;
+}

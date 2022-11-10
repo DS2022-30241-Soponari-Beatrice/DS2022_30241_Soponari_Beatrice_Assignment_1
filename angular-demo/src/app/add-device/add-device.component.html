@@ -1,0 +1,23 @@
+<div class="add-device-component">
+
+  <div class="device-form">
+
+    <form [formGroup] = "addDeviceForm" > <mat-form-field>
+      <input matInput placeholder="description" formControlName="description">
+    </mat-form-field>
+      <br>
+      <mat-form-field>
+        <input matInput name ="address" placeholder="address" formControlName="address">
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <input matInput name ="max_hourly_energy_consumption" placeholder="max_hourly_energy_consumption" formControlName="max_hourly_energy_consumption">
+      </mat-form-field>
+      <br>
+      <button mat-raised-button color="primary" (click)="addDevice()">Add Device </button>
+
+    </form>
+  </div>
+
+
+</div>

@@ -1,0 +1,51 @@
+<div>
+  <table class="client_table">
+    <thead class="table-head">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Username</th>
+      <th>Role</th>
+      <th>Edit client's details</th>
+      <th>Delete client</th>
+    </tr>
+    </thead>
+    <tbody class="table-body">
+    <ng-container *ngIf="users$ | async as clients$ else noData">
+      <tr *ngFor="let client of clients$">
+        <td>{{client.id}}</td>
+        <td>{{client.name}}</td>
+        <td>{{client.username}}</td>
+        <td>{{client.role}}</td>
+        <td> <button class="edit_client_button" routerLink="/edit-user/{{client.id}}" routerLinkActive="active" ariaCurrentWhenActive="page" mat-button>Edit client</button>
+        <td> <button class="delete_client_button" mat-button (click)="goToDeleteUser()">Delete client</button>
+      </tr>
+    </ng-container>
+    </tbody>
+  </table>
+
+  <button mat-button (click)="goToAddUser()">Add client</button>
+
+<!--  <ng-container *ngIf="users$ | async as users$">-->
+
+<!--  <form [formGroup] = "viewUsers" *ngFor="let user of users$" class="form-for-users">-->
+<!--    <mat-form-field>-->
+<!--      <input matInput placeholder="username" formControlName="username">-->
+<!--      {{user.username}}-->
+<!--    </mat-form-field>-->
+<!--    <br>-->
+<!--    <mat-form-field>-->
+<!--      <input matInput type="name" name ="name" placeholder="name" formControlName="name">-->
+<!--      {{user.name}}-->
+<!--    </mat-form-field>-->
+<!--    <br>-->
+<!--    <mat-form-field>-->
+<!--      <input matInput type="role" name ="role" placeholder="role" formControlName="role">-->
+<!--      {{user.role}}-->
+<!--    </mat-form-field>-->
+<!--  </form>-->
+<!--</ng-container>-->
+
+
+  <ng-template #noData>No Data Available</ng-template></div>
+
