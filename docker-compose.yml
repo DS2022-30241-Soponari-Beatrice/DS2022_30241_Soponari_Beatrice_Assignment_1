@@ -40,7 +40,4 @@ services:
       - '80:80'
     build: 
       context: ./angular-demo
-    environment:
-      NGINX_ENVSUBST_OUTPUT_DIR: /etc/nginx
-      NGINX_BASE: '' 
-      NGINX_BASE_SLASH: /
+    
